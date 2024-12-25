@@ -543,6 +543,7 @@ class SerialClient(object):
                     time.sleep(0.001)
                 else:
                     rospy.loginfo("wrong checksum for topic id and msg")
+                    raise
 
             except IOError as exc:
                 rospy.logwarn('Last read step: %s' % read_step)
